@@ -1,2 +1,2 @@
-# Laborator3. Exercitiul 4.
+# Laborator 3. Exercitiul 4.
  
