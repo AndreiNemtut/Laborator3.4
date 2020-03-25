@@ -4,36 +4,23 @@ import java.util.Scanner;
 
 public class Compare {
 
-    private int num = 1;
+    int num = 1;
 
-    public int compareNames(char[] first_name, char[] second_name) {
-        int temp = 1, leng;
-        if (first_name.length != second_name.length)
-            temp = 0;
-        if(first_name.length > second_name.length)
-            leng = second_name.length;
-        else
-            leng = first_name.length;
-        for(int i = 0; i < leng; i++)
-            if(first_name[i] != second_name[i])
-                temp = 0;
-
-        if(temp == 0) {
+    public void compareNames(String first_name, String second_name) {
+        if(!first_name.equals(second_name)) {
             num++;
             retryName(first_name);
         }
         else {
             System.out.println("Felicitari, ai reusit sa ghicesti numele din " + num + " incercari.");
         }
-        return 1;
     }
 
-    public void retryName(char[] first_name) {
+    public void retryName(String first_name) {
         System.out.println("Nu ai reusit sa ghicesti, incearca iar:");
         Scanner second_scanner = new Scanner(System.in);
         String second_name = second_scanner.nextLine();
 
-        char[] chars = second_name.toCharArray();
-        compareNames(first_name, chars);
+        compareNames(first_name, second_name);
     }
 }
