@@ -9,14 +9,12 @@ public class Main {
 
         System.out.println("Introduceti numele de la tastatura:");
         Scanner first_scanner = new Scanner(System.in);
-        String first_name = first_scanner.nextLine();
-        char c[] = first_name.toCharArray();
+        String c = first_scanner.nextLine();
 
         System.out.println("Incercati sa ghiciti numele:");
         Scanner second_scanner = new Scanner(System.in);
         String second_name = second_scanner.nextLine();
-        char[] s_name = second_name.toCharArray();
 
-        comp.compareNames(c, s_name);
+        comp.compareNames(c, second_name);
     }
 }
